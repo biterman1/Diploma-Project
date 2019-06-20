@@ -64,18 +64,8 @@ namespace CaNa
 
         private void диваниToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            groupBox2.Visible = false;
-            groupBox3.Visible = false;
-            groupBox4.Visible = false;
-            groupBox5.Visible = false;
-            groupBox6.Visible = false;
-            groupBox7.Visible = false;
-            groupBox8.Visible = false;
-            groupBox9.Visible = false;
-            groupBox10.Visible = false;
-            groupBox11.Visible = false;
-            groupBox12.Visible = false;
-            groupBox1.Visible = true;
+            Divan divan = new Divan();
+            divan.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -383,6 +373,14 @@ namespace CaNa
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void ЗапитНаПереглядПрибуткуЗаРікToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Register r = new Register();
+            r.Show();
+            
+                
         }
     }
 }
