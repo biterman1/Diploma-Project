@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Divan));
-            this.диваниTableAdapter = new CaNa.DBDataSetTableAdapters.ДиваниTableAdapter();
-            this.диваниBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,34 +40,17 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.диваниBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.диваниDataGridView = new System.Windows.Forms.DataGridView();
+            this.диваниTableAdapter1 = new CaNa.DBDataSetTableAdapters.ДиваниTableAdapter();
             this.dBDataSet = new CaNa.DBDataSet();
-            ((System.ComponentModel.ISupportInitialize)(this.диваниBindingSource)).BeginInit();
+            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
+            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.диваниBindingNavigator)).BeginInit();
-            this.диваниBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.диваниDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).BeginInit();
+            this.fillByToolStrip.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // диваниTableAdapter
-            // 
-            this.диваниTableAdapter.ClearBeforeFill = true;
-            // 
-            // диваниBindingSource
-            // 
-            this.диваниBindingSource.DataMember = "Дивани";
             // 
             // groupBox1
             // 
@@ -84,15 +64,15 @@
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.диваниBindingNavigator);
             this.groupBox1.Controls.Add(this.диваниDataGridView);
+            this.groupBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.groupBox1.Location = new System.Drawing.Point(8, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(821, 418);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Асортимент диванів";
-            this.groupBox1.Visible = false;
+            this.groupBox1.UseCompatibleTextRendering = true;
             this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // label4
@@ -136,7 +116,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.диваниBindingSource, "Фото", true));
             this.pictureBox1.Location = new System.Drawing.Point(492, 233);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(317, 139);
@@ -154,7 +133,6 @@
             // 
             // textBox4
             // 
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.диваниBindingSource, "Ціна", true));
             this.textBox4.Location = new System.Drawing.Point(143, 309);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(151, 20);
@@ -162,7 +140,6 @@
             // 
             // textBox3
             // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.диваниBindingSource, "Код", true));
             this.textBox3.Location = new System.Drawing.Point(143, 347);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(151, 20);
@@ -170,7 +147,6 @@
             // 
             // textBox2
             // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.диваниBindingSource, "Опис", true));
             this.textBox2.Location = new System.Drawing.Point(143, 270);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(318, 20);
@@ -178,146 +154,69 @@
             // 
             // textBox1
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.диваниBindingSource, "Найменування", true));
             this.textBox1.Location = new System.Drawing.Point(143, 233);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(318, 20);
             this.textBox1.TabIndex = 4;
             // 
-            // диваниBindingNavigator
-            // 
-            this.диваниBindingNavigator.AddNewItem = null;
-            this.диваниBindingNavigator.BindingSource = this.диваниBindingSource;
-            this.диваниBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.диваниBindingNavigator.DeleteItem = null;
-            this.диваниBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2});
-            this.диваниBindingNavigator.Location = new System.Drawing.Point(3, 16);
-            this.диваниBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.диваниBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.диваниBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.диваниBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.диваниBindingNavigator.Name = "диваниBindingNavigator";
-            this.диваниBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.диваниBindingNavigator.Size = new System.Drawing.Size(815, 25);
-            this.диваниBindingNavigator.TabIndex = 3;
-            this.диваниBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Положение";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
             // диваниDataGridView
             // 
-            this.диваниDataGridView.AutoGenerateColumns = false;
             this.диваниDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.диваниDataGridView.DataSource = this.диваниBindingSource;
             this.диваниDataGridView.Location = new System.Drawing.Point(3, 44);
             this.диваниDataGridView.Name = "диваниDataGridView";
             this.диваниDataGridView.Size = new System.Drawing.Size(806, 171);
             this.диваниDataGridView.TabIndex = 0;
+            // 
+            // диваниTableAdapter1
+            // 
+            this.диваниTableAdapter1.ClearBeforeFill = true;
             // 
             // dBDataSet
             // 
             this.dBDataSet.DataSetName = "DBDataSet";
             this.dBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // fillByToolStrip
+            // 
+            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fillByToolStripButton});
+            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.fillByToolStrip.Name = "fillByToolStrip";
+            this.fillByToolStrip.Size = new System.Drawing.Size(849, 25);
+            this.fillByToolStrip.TabIndex = 3;
+            this.fillByToolStrip.Text = "fillByToolStrip";
+            // 
+            // fillByToolStripButton
+            // 
+            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillByToolStripButton.Name = "fillByToolStripButton";
+            this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
+            this.fillByToolStripButton.Text = "FillBy";
+            this.fillByToolStripButton.Click += new System.EventHandler(this.FillByToolStripButton_Click);
+            // 
             // Divan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(838, 440);
+            this.ClientSize = new System.Drawing.Size(849, 450);
+            this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.groupBox1);
             this.Name = "Divan";
             this.Text = "Form2";
-            ((System.ComponentModel.ISupportInitialize)(this.диваниBindingSource)).EndInit();
+            this.Load += new System.EventHandler(this.Divan_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.диваниBindingNavigator)).EndInit();
-            this.диваниBindingNavigator.ResumeLayout(false);
-            this.диваниBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.диваниDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).EndInit();
+            this.fillByToolStrip.ResumeLayout(false);
+            this.fillByToolStrip.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.BindingSource диваниBindingSource;
-        private DBDataSetTableAdapters.ДиваниTableAdapter диваниTableAdapter;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -329,17 +228,10 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.BindingNavigator диваниBindingNavigator;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.DataGridView диваниDataGridView;
+        private DBDataSetTableAdapters.ДиваниTableAdapter диваниTableAdapter1;
         private DBDataSet dBDataSet;
+        private System.Windows.Forms.ToolStrip fillByToolStrip;
+        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
     }
 }

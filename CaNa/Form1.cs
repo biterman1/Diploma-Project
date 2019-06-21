@@ -59,13 +59,19 @@ namespace CaNa
 
         private void button1_Click(object sender, EventArgs e)
         {
-            groupBox1.Visible = false;
+          //  groupBox1.Visible = false;
         }
 
         private void диваниToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try { 
             Divan divan = new Divan();
             divan.ShowDialog();
+            }
+            catch
+            {
+                MessageBox.Show("Error!");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -75,7 +81,7 @@ namespace CaNa
 
         private void кріслаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            groupBox1.Visible = false;
+            //groupBox1.Visible = false;
             groupBox3.Visible = false;
             groupBox4.Visible = false;
             groupBox5.Visible = false;
@@ -91,7 +97,7 @@ namespace CaNa
 
         private void ліжкаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            groupBox1.Visible = false;
+           // groupBox1.Visible = false;
             groupBox2.Visible = false;
             groupBox4.Visible = false;
             groupBox5.Visible = false;
@@ -117,7 +123,7 @@ namespace CaNa
 
         private void шафиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            groupBox1.Visible = false;
+          //  groupBox1.Visible = false;
             groupBox2.Visible = false;
             groupBox3.Visible = false;
             groupBox5.Visible = false;
@@ -133,7 +139,7 @@ namespace CaNa
 
         private void комодиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            groupBox1.Visible = false;
+          //  groupBox1.Visible = false;
             groupBox2.Visible = false;
             groupBox3.Visible = false;
             groupBox4.Visible = false;
@@ -154,7 +160,7 @@ namespace CaNa
 
         private void оновитиБазуToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            groupBox1.Visible = false;
+          //  groupBox1.Visible = false;
             groupBox2.Visible = false;
             groupBox3.Visible = false;
             groupBox4.Visible = false;
@@ -191,7 +197,7 @@ namespace CaNa
 
         private void постачальникиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            groupBox1.Visible = false;
+          //  groupBox1.Visible = false;
             groupBox2.Visible = false;
             groupBox3.Visible = false;
             groupBox4.Visible = false;
@@ -207,7 +213,7 @@ namespace CaNa
 
         private void покупціToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            groupBox1.Visible = false;
+          //  groupBox1.Visible = false;
             groupBox2.Visible = false;
             groupBox3.Visible = false;
             groupBox4.Visible = false;
@@ -223,7 +229,7 @@ namespace CaNa
 
         private void базаЗамовленьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            groupBox1.Visible = false;
+           // groupBox1.Visible = false;
             groupBox2.Visible = false;
             groupBox3.Visible = false;
             groupBox4.Visible = false;
@@ -239,7 +245,7 @@ namespace CaNa
 
         private void книгаПродажToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            groupBox1.Visible = false;
+          //  groupBox1.Visible = false;
             groupBox2.Visible = false;
             groupBox3.Visible = false;
             groupBox4.Visible = false;
@@ -255,7 +261,7 @@ namespace CaNa
 
         private void статистикаПродажToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            groupBox1.Visible = false;
+           // groupBox1.Visible = false;
             groupBox2.Visible = false;
             groupBox3.Visible = false;
             groupBox4.Visible = false;
@@ -271,7 +277,7 @@ namespace CaNa
 
         private void статистикаАсортиментаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            groupBox1.Visible = false;
+           // groupBox1.Visible = false;
             groupBox2.Visible = false;
             groupBox3.Visible = false;
             groupBox4.Visible = false;
